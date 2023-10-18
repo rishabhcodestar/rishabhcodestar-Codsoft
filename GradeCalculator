@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class gradecalculator {
+    public static void main(String args []) {
+        float total = 0;
+        Scanner sc = new Scanner(System.in);
+        total =0;
+        System.out.print("enter the total marks the exam is taken for");
+        int totalmarks = sc.nextInt();
+        System.out.print("enter marks of subject1");
+        float sub1 = sc.nextFloat();
+        total = total+sub1;
+        System.out.println("enter the marks of subject 2");
+        float sub2 = sc.nextFloat();
+        total = total+sub2;
+        System.out.println("enter the marks of subject 3");
+        float sub3 = sc.nextFloat();
+        total = total+sub3;
+        System.out.println("enter the marks of subject 4");
+        float sub4= sc.nextFloat();
+        total = total +sub4;
+        System.out.println("enter the marks of subject 5");
+        float sub5= sc.nextFloat();
+        total = total+ sub5;
+
+        float avgpercentage =(total/5);
+        System.out.println("the average percentage is "+avgpercentage);
+        String grade =new String("");
+        if(avgpercentage < 30) {
+            grade = "F";
+
+
+        }
+        else if(avgpercentage >30 && avgpercentage <50) {
+            grade ="E";
+        }
+        else if(avgpercentage >50 && avgpercentage <60) {
+            grade ="D";
+        }
+        else if(avgpercentage >60 && avgpercentage <70) {
+            grade = "C";
+        }
+        else if(avgpercentage >70 && avgpercentage <80) {
+            grade ="B";
+        }
+        else if(avgpercentage >80 && avgpercentage <90) {
+            grade = "A";
+        }
+        else {
+            grade ="S";
+        }
+        System.out.println("the total marks obtained are "+total);
+        System.out.println("the average percentage obtained is "+avgpercentage);
+        System.out.println("the grade obtained is "+grade);
+    }}
